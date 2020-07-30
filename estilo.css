@@ -1,0 +1,10 @@
+section {
+    margin-bottom: 25px;
+  }
+  
+  header {
+    margin-bottom: 25px;
+  }
+
+p.double {border-style: double;}
+.center {text-align : center;}

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ContratoDeNamoro</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>
+                Contrato de Namoro
+            </h1>
+            <br/>
+        </header>
+        <div id="areaAdvogado" style="background-color:rgba(221, 194, 215, 0.808);padding:20px;">
+        <H3>Área do Advogado</H3>
+        <br>
+        <form name="formNamoro" id="formNamoro">
+            <fieldset>
+                <div>
+                    <label for="_loversInvolved" class="textoImportante"style="font-size:80%" > Número de Pessoas Envolvidas no Relacionamento: </label>
+                    <br>
+                    <input type="number" id="_loversInvolved" name="_loversInvolved" size="60" maxlength="60" >
+                    <br>
+                    <br>
+                </div>
+                <div>
+                    <label for="_party" class="textoImportante"style="font-size:80%"> Endereço Ethereum do(a) Namorado(a) 0: </label>
+                    <br>
+                    <input type="text" id="_party" name="_party" size="60" maxlength="60" >
+                    <br>
+                    <br>
+                </div>
+                <div>
+                    <label for="_name" class="textoImportante" style="font-size:80%">Nome do(a) Namorado(a) 0:</label>
+                    <br>
+                    <input type="text" name="_name" id="_name" size="100">
+                    <br>
+                    <br>
+                </div>
+                <div>
+                    <button class="textoImportante" style="font-size:80%" onclick="conectaAoMetamask();"> 🦊 Conectar ao Metamask </button>
+                    <br>
+                    <br>               
+                </div>
+            </fieldset>
+        </form>
+        </div>
+    <div id=consentimento>
+        <div>
+        <br>
+        <H3>Área dos Namorados</H3>
+        <br>
+        <p>Este Contrato de Namoro tem o propósito de servir como instrumento de manifestação de vontade expressa 
+        de um casal que tenha iniciado um relacionamento, ou seja, esteja namorando, mas que não tenha a intenção 
+        de que este relacionamento seja reconhecido como uma <strong><mark>União Estável</mark></strong>.</p>
+        </div>
+    <div>
+        <p>Seu advogado prencheu as informações das partes envolvidas, incluindo as carteiras Ethereum.</p>
+        <p> Siga para a conexão com o Metamask e preenchimento do formulário de consentimento.</p>
+    </div>
+    <div id= "preencherConsentimento">
+        <br>
+        <p>Para dar andamento e preencher o formulário de consentimento, conecte-se ao Metamask. 
+        Essa operação terá o custo de honorários advocatícios de 500WEI por parte envolvida."</p>
+        <button class="textoImportante" style="font-size:80%" onclick="conectaAoMetamask();"> 🦊 Conectar ao Metamask </button>
+        <br>
+    </div>
+    <br>
+    <section id="consent1">
+        <div>
+            <fieldset>
+                <div>
+                    <label for="_loverId" class="textoImportante"style="font-size:80%" > Id da Parte: </label>
+                    <br>
+                    <input type="number" id="_loverId" name="_loverId" size="10" maxlength="10" >
+                    <br>
+                </div>
+            </fieldset>
+            <br>
+            <p> Para que o compromisso seja efetivado é necessário que todas as partes digam "SIM" a ambas as condições 
+            descritas abaixo. Se não houver compromisso, o valor dos honorários será extornado.</p>
+            <br>
+            <h2>Compromisso de Namoro</h2>
+            <p>Ao escolher a opção "Sim" abaixo, você confirma que vocês estão namorando e que a intenção das partes 
+            é de apenas manterem um namoro e que não há por parte de vocês o intuito de constituir família. Ainda que 
+            haja pernoites, viagens, cohabitação, a vontade das partes é de que a relação seja estritamente de namoro.</p>
+        </div>
+        <div>
+            <label for="_consent1">Você confirma que este relacionamento é um namoro?:</label>
+            <select name="_consent1" id="_consent1">
+                <option value="1">Sim</option>
+                <option value="0">Não</option>
+            </select>
+            <br>
+        </div>
+    </section> 
+    <section id="consent2">
+        <div>
+            <h2>Regime de Bens</h2>
+            <p>Embora esta seja apenas uma relação de namoro, as partes esclarecem que o relacionamento estabelecido 
+            é firmado com separação total de bens. E na hipótese do relacionamento evoluir para uma união estável, será
+            firmado um novo contrato, sendo que este também será pelo regime da separação total de bens.</p>
+        </div>
+        <div>
+            <label for="_consent2">Você aceita regime de separação de bens?:</label>
+            <select name="_consent2" id="_consent2">
+                <option value="1">Sim</option>
+                <option value="0">Não</option>
+            </select>
+        </div>
+    </section>  
+    <div>
+        <button onclick="commitment()"> ❤️Confirmar o seu consentimento❤️ </button>
+        <br>
+        <br>
+    </div>
+    </div>
+   <section id="confirmStatus" style = "display:none">
+       <div style="background-color:palegoldenrod;padding:20px;" class="double">
+            <br>
+            <div class= "center">
+            <h2>💝Certificado de Namoro</h2>
+            </div>
+            <br>
+                <p> Este certificado confirma que as partes identificadas abaixo estão oficialmente namorando! ❤️❤️❤️ 
+                    Eles manifestaram expressamente a vontade de que este relacionamento seja considerado e tratado 
+                    como namoro para todos os fins de direito, escolhendo, mesmo não sendo necessário, 
+                    o regime da <strong><mark>separação total de bens</strong></mark>.</p>
+                <br>
+                <p> As carteiras que firmaram o compromisso são as seguintes: <br>
+                    - Parte 0: <br>
+                    - Parte 1: <br>
+                
+                <br>
+                <p> O consentimento foi emitido por cada parte em:
+                    - Parte 0: 
+                    - Parte 1: 
+                </p>
+       </div>
+   </section> 
+   <script src="https://code.jquery.com/jquery-3.5.1.js" 
+   integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+ <!-- Importacao da biblioteca Ethers.js para nos auxiliar na comunicacao com o Ethereum -->
+ <script src="https://cdn.ethers.io/lib/ethers-5.0.umd.min.js" type="text/javascript"></script>
+ <script src="dados-contratos-inteligentes.js"></script>
+ <script src="blockchain-infra.js"></script>
+ <script src="blockchain.js"></script>
+</body>
+</html>
